@@ -1,10 +1,18 @@
 
+# range(stop)
+for  a in range(100):
+    print("Index",a)
+
+
+# range(start, stop)
+for  a in range(90,100):
+    print("Index",a)
 
 
 
-
-# for  a in range(90,100,2):
-#     print("Index",a)
+# range( start, stop, step)
+for  a in range(90,100,2):
+    print("Index",a)
 
 
 for a in range(100):

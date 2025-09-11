@@ -5,35 +5,34 @@ print(12*12)
 print(12/2)
 
 # string for textual data
-# userName= "M Hashir"
-# # int for Int
-# age=23
-# # float for decimal
-# height=6.1
-# # boolean
-# isGameFun=True
-#
-#
-# print("Student Name =",userName)
-# print("Student Age",age)
-# print("Student Height",height)
-# print("Student Game Status",isGameFun)
+userName= "M Hashir"
+# int for Int
+age=23
+# float for decimal
+height=6.1
+# boolean
+isGameFun=True
+
+print("Student Name =",userName)
+print("Student Age",age)
+print("Student Height",height)
+print("Student Game Status",isGameFun)
 
 
-# # string for textual data
-# userName= input("Enter Your Name ")
-# # int for Int
-# age=input("Enter Your Age ")
-# # float for decimal
-# height=input("Enter Your Height ")
-# # boolean
-# isGameFun=input("Enter Your Game Status  ")
+# string for textual data
+userName= input("Enter Your Name ")
+# int for Int
+age=input("Enter Your Age ")
+# float for decimal
+height=input("Enter Your Height ")
+# boolean
+isGameFun=input("Enter Your Game Status  ")
 #
 #
-# print("Student Name =",userName)
-# print("Student Age",age)
-# print("Student Height",height)
-# print("Student Game Status",isGameFun)
+print("Student Name =",userName)
+print("Student Age",age)
+print("Student Height",height)
+print("Student Game Status",isGameFun)
 
 
 numOne=float(input("Enter Your Number1"))

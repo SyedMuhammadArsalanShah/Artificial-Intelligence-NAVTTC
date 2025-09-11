@@ -67,7 +67,10 @@ if userEmail==userEmailLogin and userPass== userPassLogin:
     else:
         print("positive",num1)
 
-    print("Positive") if num1<0 else print("Negative")
+    print("Program NO 05 Shorthand IF/ELSE")
+    num1=int(input("Enter your number"))
+    status="Positive" if num1>0 else "Negative"
+    print(status)
 
 
 else:
