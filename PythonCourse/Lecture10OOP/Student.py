@@ -1,12 +1,15 @@
 class Student:
     centerName="NAVTTC"
 
-    def __init__(self,name,course,age):
-        self.name=name
-        self.course=course
-        self.age=age
-        print("Student Name Is ",self.name,"Course is ", self.course,"age is", self.age)
+    # def __init__(self,name,course,age):
+    #     self.name=name
+    #     self.course=course
+    #     self.age=age
+    #     print("Student Name Is ",self.name,"Course is ", self.course,"age is", self.age)
         
+    @staticmethod
+    def userEnroll():
+        print("user Has been Erolled")
 
     def information(self,name,course):
         self.fullname=name
@@ -27,6 +30,11 @@ class Student:
 # object2.information("Aisha","AI")
 
 
-object3=Student("Laiba","GD","45")
-object4=Student("Aisha","DS","46")
-object5=Student("Nawaira","DS","50")
+# object3=Student("Laiba","GD","45")
+# object4=Student("Aisha","DS","46")
+# object5=Student("Nawaira","DS","50")
+
+
+
+object=Student()
+object.userEnroll()
