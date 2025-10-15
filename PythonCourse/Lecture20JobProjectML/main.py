@@ -10,6 +10,9 @@ from sklearn.tree  import DecisionTreeRegressor
 from sklearn.ensemble  import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error
 
+# cross validation
+from sklearn.model_selection import cross_val_score
+
 
 # 1 load dataset 
 housing= pd.read_csv("housing.csv")
@@ -79,12 +82,26 @@ tree_predicts=tree_reg.predict(housing_prepared)
 forest_predicts=forest_reg.predict(housing_prepared)
 
 
-lin_rmse=root_mean_squared_error(housing_label, lin_predicts)
-tree_rmse=root_mean_squared_error(housing_label, tree_predicts)
-forest_rmse=root_mean_squared_error(housing_label, forest_predicts)
+# lin_rmse=root_mean_squared_error(housing_label, lin_predicts)
+# tree_rmse=root_mean_squared_error(housing_label, tree_predicts)
+# forest_rmse=root_mean_squared_error(housing_label, forest_predicts)
 
 
 
-print("Linear",lin_rmse)
+# print("Linear",lin_rmse)
+# print("Dec",tree_rmse)
+# print("Fore",forest_rmse)
+
+
+
+
+tree_rmse=-cross_val_score(
+    tree_reg,
+    housing_prepared,
+    housing_label,
+    scoring="neg_root_mean_squared_error",
+    cv=3
+)
+
 print("Dec",tree_rmse)
-print("Fore",forest_rmse)
+print()
