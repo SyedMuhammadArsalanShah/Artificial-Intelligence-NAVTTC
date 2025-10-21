@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}About PAge {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>About</h1>
+  <p class="important">
+    Welcome on my awesome aboutpage.
+{% endblock %}
+
+   {% block footer %}
+      &copy; Copyright 2025  by <a href="http://syedmuhammadarsalanshah.vercel.app/">you</a>.
+      {% endblock %}
