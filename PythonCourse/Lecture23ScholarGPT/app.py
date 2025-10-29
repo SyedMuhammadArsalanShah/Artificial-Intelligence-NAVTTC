@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 from core.pipeline import run_chatbot
 
@@ -14,4 +15,6 @@ def home():
 if __name__ == "__main__":
     # app.run(debug=True)
     # for hosting ----
-    app.run(host="0.0.0.0", port=5000)
+    # Render assigns PORT=10000 by default
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
