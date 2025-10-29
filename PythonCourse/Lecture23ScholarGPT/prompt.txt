@@ -1,0 +1,10 @@
+
+kiya app nouman ali khan ke lectures series akhri mojza ke barey sawal poochna chaty hen tou men apka khudkaar 
+chatbot 
+
+     start     end         name                                 text
+31  123.58  126.58  VID.mp4.mp3      What is the meaning of history?
+30  119.58  123.58  VID.mp4.mp3   What is the importance of history?
+49  184.58  186.58  VID.mp4.mp3      This is the meaning of history.
+47  179.58  181.58  VID.mp4.mp3      This is the meaning of history.
+39  156.58  158.58  VID.mp4.mp3      This is the meaning of history.

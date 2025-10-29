@@ -10,11 +10,7 @@ def hello_world():
     if request.method=="POST":
         email=request.form["email"]
         password=request.form["password"]
-        return jsonify({
-            "email": email,
-            "password": password,
-        })
-        # return render_template("index.html", emailaddress=email,passw=password,tag=congrats)
+        return render_template("index.html", emailaddress=email,passw=password,tag=congrats)
     return render_template("index.html", emailaddress=email,passw=password)
 
 
