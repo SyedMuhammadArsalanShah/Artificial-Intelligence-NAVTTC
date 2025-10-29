@@ -5,3 +5,5 @@ joblib
 numpy
 requests
 scikit-learn
+Flask
+gunicorn
