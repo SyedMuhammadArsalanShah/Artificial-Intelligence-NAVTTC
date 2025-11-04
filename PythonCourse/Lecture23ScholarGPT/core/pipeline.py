@@ -1,4 +1,3 @@
-
 import os
 import subprocess
 import whisper
@@ -8,6 +7,9 @@ import joblib
 import numpy as np
 import requests
 from sklearn.metrics.pairwise import cosine_similarity
+
+
+
 
 model = whisper.load_model("base")
 df = joblib.load("embeddings.joblib")
@@ -26,6 +28,7 @@ def inference(prompt):
         "stream": False
     })
     return r.json()
+
 
 def run_chatbot(question):
     question_embedding = create_embedding([question])[0]
