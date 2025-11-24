@@ -14,6 +14,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 load_dotenv()
 token = os.getenv("SECRET_KEY")
 token_G = os.getenv("GEMINI_API_KEY")
+token_open = os.getenv("OPENAI_API_KEY")
 
 
 intents = discord.Intents.default()
@@ -30,16 +31,23 @@ with open("facebook_posts.json", "r", encoding="utf-8") as f:
 
 # step 02 is embeddings
 def get_embedding(text):
-    r = requests.post(
-        "http://localhost:11434/api/embed",
-        json={
-            "model": "bge-m3",
-            "input": [text]
-        }
-    )
-    data = r.json()
-    return np.array(data["embeddings"][0])
-    
+    # r = requests.post(
+    #     "http://localhost:11434/api/embed",
+    #     json={
+    #         "model": "bge-m3",
+    #         "input": [text]
+    #     }
+    # )
+    # data = r.json()
+
+    from openai import OpenAI
+
+    client = OpenAI(api_key=token_open)
+
+    response = client.embeddings.create(input=text, model="text-embedding-3-small")
+
+    print(response.data[0].embedding)
+    return np.array(response.data[0].embedding)
 
 
 if os.path.exists("embeddings.joblib"):
