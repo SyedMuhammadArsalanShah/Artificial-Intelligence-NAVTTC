@@ -1,0 +1,55 @@
+/* core/static/core/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.note-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.note-item h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.note-item p {
+    margin: 0 0 15px;
+}
+
+.date {
+    font-size: 12px;
+    color: #777;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
