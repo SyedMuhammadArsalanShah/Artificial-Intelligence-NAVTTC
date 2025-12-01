@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    <title>Add Note</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="heading">Add New Note</h1>
+
+    <form method="POST" class="form-box">
+        {% csrf_token %}
+
+        <input type="text" name="title" placeholder="Enter Title" required>
+        <textarea name="content" placeholder="Write content..." required></textarea>
+
+        <button type="submit" class="btn">Save Note</button>
+    </form>
+
+    <a class="back" href="{% url 'notes_list' %}">← Back to Notes</a>
+</div>
+
+</body>
+</html>

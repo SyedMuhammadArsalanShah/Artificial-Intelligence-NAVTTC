@@ -1,26 +1,33 @@
+{% load static %}
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Notes</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    <title>Notes</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="heading">Notes</h1>
+<div class="container">
 
-        <ul class="note-list">
-            {% for note in notes %}
-                <li class="note-item">
-                    <h2>{{ note.title }}</h2>
-                    <p>{{ note.content }}</p>
-                    <span class="date">{{ note.created_at }}</span>
-                </li>
-            {% empty %}
-                <li class="empty">No notes available.</li>
-            {% endfor %}
-        </ul>
-    </div>
+    <h1 class="heading">All Notes</h1>
+
+    <a href="{% url 'add_note' %}" class="btn add-btn">+ Add New Note</a>
+
+    <ul class="note-list">
+    {% for note in notes %}
+        <li class="note-item">
+            <h2>{{ note.title }}</h2>
+            <p>{{ note.content }}</p>
+            <span class="date">{{ note.created_at }}</span>
+
+            <div class="actions">
+                <a href="{% url 'edit_note' note.id %}" class="edit">Edit</a>
+                <a href="{% url 'delete_note' note.id %}" class="delete">Delete</a>
+            </div>
+        </li>
+    {% empty %}
+        <li class="empty">No notes available.</li>
+    {% endfor %}
+    </ul>
+</div>
 </body>
 </html>

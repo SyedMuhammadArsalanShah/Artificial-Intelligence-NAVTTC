@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    <title>Edit</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="heading">Edit Note</h1>
+
+    <form method="POST" class="form-box">
+        {% csrf_token %}
+
+        <input type="text" name="title" value="{{ note.title }}" required>
+        <textarea name="content" required>{{ note.content }}</textarea>
+
+        <button type="submit" class="btn">Update</button>
+    </form>
+
+    <a class="back" href="{% url 'notes_list' %}">← Back</a>
+</div>
+
+</body>
+</html>

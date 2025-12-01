@@ -1,6 +1,10 @@
+# core/urls.py
 from django.urls import path
-from .views import notes_list
+from . import views
 
 urlpatterns = [
-    path('', notes_list, name='notes_list'),
+    path('', views.notes_list, name='notes_list'),
+    path('add/', views.add_note, name='add_note'),
+    path('edit/<int:id>/', views.edit_note, name='edit_note'),
+    path('delete/<int:id>/', views.delete_note, name='delete_note'),
 ]
