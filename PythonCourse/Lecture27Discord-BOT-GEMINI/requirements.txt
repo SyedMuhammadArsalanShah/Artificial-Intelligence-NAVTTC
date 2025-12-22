@@ -1,3 +1,11 @@
-dotenv
-discord.py
+fastapi
+uvicorn[standard]
+numpy
+joblib
+python-dotenv
+beautifulsoup4
+scikit-learn
+openai
 google-genai
+discord.py
+tiktoken
