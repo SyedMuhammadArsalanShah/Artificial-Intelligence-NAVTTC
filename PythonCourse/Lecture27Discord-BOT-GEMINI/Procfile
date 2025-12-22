@@ -1,0 +1,2 @@
+web: uvicorn smasb_bot_api:app --host 0.0.0.0 --port $PORT
+worker: python mega_ai_discord_bot.py

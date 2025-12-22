@@ -197,8 +197,11 @@ __pycache__/
 ## 🏁 12. Summary
 
 ✅ You created a Discord bot
+
 ✅ Connected it with Gemini (GenAI)
+
 ✅ Set up environment variables safely
+
 ✅ The bot replies when mentioned in a Discord channel
 
 ---
